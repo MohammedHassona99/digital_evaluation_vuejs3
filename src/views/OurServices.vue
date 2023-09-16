@@ -1,46 +1,62 @@
-<script setup></script>
+<script setup>
+import PlanOne from '@/components/icons/PlanOne.vue'
+import PlanTwo from '@/components/icons/PlanTwo.vue'
+import PlanThree from '@/components/icons/PlanThree.vue'
+import PlanFour from '@/components/icons/PlanFour.vue'
+</script>
 
 <template>
   <div class="our-services">
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#staticBackdrop"
-    >
-      Launch static backdrop modal
-    </button>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3 d-none d-md-block">slider</div>
+        <div class="col-12 col-md-7">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-unstyled d-flex justify-content-between list-plan">
+                <li><PlanOne /></li>
+                <li><PlanTwo /></li>
+                <li><PlanThree /></li>
+                <li><PlanFour /></li>
+              </ul>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-4"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.list-plan {
+  position: relative;
+  li {
+    background-color: #fafbff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    &:nth-child(even) {
+      margin-top: 15px;
+    }
+    &:not(:last-child):after {
+      content: '- - - - - - - - - - - - - -';
+      position: absolute;
+      top: 0;
+      left: -140px;
+      width: 170px;
+      height: 70px;
+      border-radius: 50%;
+      
+      z-index: -5;
+    }
+    svg {
+      transform: scale(0.5);
+    }
+  }
+}
+</style>

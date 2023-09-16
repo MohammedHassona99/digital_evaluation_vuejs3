@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md">
     <div class="container">
-      <router-link to="/">
+      <router-link to="/" class="text-decoration-none">
         <div class="navbar-brand">
           <img src="./../assets/mainLogo.png" height="50" alt="" />
         </div>
@@ -23,32 +23,32 @@
         </div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
           <li class="nav-item active">
-            <router-link to="/">
+            <router-link to="/" class="text-decoration-none">
               <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/our-services">
+            <router-link to="/our-services" class="text-decoration-none">
               <a class="nav-link" href="#">خدماتنا</a>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="our-works">
+            <router-link to="our-works" class="text-decoration-none">
               <a class="nav-link" href="#">اعمالنا</a>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="">
+            <router-link to="" class="text-decoration-none">
               <a class="nav-link" href="#">شركاؤنا</a>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/aboutUs">
+            <router-link to="/aboutUs" class="text-decoration-none">
               <a class="nav-link" href="#">من نحن</a>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="contactUs">
+            <router-link to="contactUs" class="text-decoration-none">
               <a class="nav-link" href="#">تواصل معنا</a>
             </router-link>
           </li>
